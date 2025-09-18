@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 
 
-const serverFront = 'https://pasarela-de-pagos-practicas.vercel.app/';
+const serverFront = 'https://pasarela-de-pagos-practicas.vercel.app';
 
 export const UseProduct = () => {
     const[product,setProduct] = useState([])
