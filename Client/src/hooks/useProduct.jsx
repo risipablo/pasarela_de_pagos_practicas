@@ -2,11 +2,13 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 
 
+const serverFront = 'https://pasarela-de-pagos-practicas.vercel.app/';
+
 export const UseProduct = () => {
     const[product,setProduct] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/api/product')
+        axios.get(`${serverFront}api/product`)
         .then(res => setProduct(res.data))
         .catch(err => console.log(err))
     }, [])
@@ -17,7 +19,7 @@ export const UseProduct = () => {
             return
         }
 
-        axios.post('http://localhost:3001/api/product', {
+        axios.post(`${serverFront}api/product`, {
             name:name, price:price, description:description, stock:stock
         })
         .then(res => {
@@ -28,7 +30,7 @@ export const UseProduct = () => {
 
 
     const deleteNote = (id) => {
-        axios.delete('http://localhost:3001/api/product/' + id)
+        axios.delete(`${serverFront}api/product/` + id)
         .then(() => {
            setProduct(product.filter(prod => prod._id !== id))
         })
@@ -41,7 +43,7 @@ export const UseProduct = () => {
         if(name.trim() === '' || price.trim() === '' || description.trim() === '' || stock == ''){
             return
         }
-        axios.patch('http://localhost:3001/api/product/' + id, {
+        axios.patch(`${serverFront}api/product/` + id, {
             name:name, price:price, description:description, stock:stock
         })
         .then(res => {
