@@ -8,7 +8,7 @@ export function ProductPage(){
     const[name, setName] = useState("")
     const[price, setPrice] = useState("")
     const[description, setDescription] = useState("")
-    const[stock, setStock] = useState("")
+    const[stock, setStock] = useState(0)
 
     const handleAddProduct = () => {
         addProduct(name, description, price, stock)
