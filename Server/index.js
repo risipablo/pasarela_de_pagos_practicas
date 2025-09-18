@@ -14,7 +14,7 @@ const corsOptions = {
         'http://localhost:5176',
         'http://localhost:5175',
         'https://pasarela-de-pagos-practicas.onrender.com',
-        // 'https://pasarela-de-pagos-practicas.vercel.app'
+        'https://pasarela-de-pagos-practicas.vercel.app'
     ],
     optionsSuccessStatus: 200,
     methods: 'GET,POST,DELETE,PUT,PATCH',

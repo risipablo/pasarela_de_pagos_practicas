@@ -1,6 +1,6 @@
 export const config = {
     // apiUrl: "http://localhost:3001", 
-    apiUrl: "https://pasarela-de-pagos-practicas.vercel.app"
+    apiUrl: "https://pasarela-de-pagos-practicas.onrender.com"
 };
 
 
